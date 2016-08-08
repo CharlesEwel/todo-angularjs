@@ -3,15 +3,14 @@ import {Task} from './task.model';
 
 @Component({
   selector: 'new-task',
+  inputs: ['categoryList'],
   outputs: ['onSubmitNewTask'],
   template: `
     <div class="task-form">
       <h3>Create Task:</h3>
       <input placeholder="Description" class="col-sm-8 input-lg" #newDescription>
-      <select class="input-lg" #newCategory>
-        <option>Work</option>
-        <option>Hobby</option>
-        <option>Home</option>
+      <select class="input-lg">
+        <option *ngFor="#currentCategory of categoryList">{{currentCategory}}</option>
       </select>
       <select class="input-lg" #newPriority>
         <option value='1'>High Priority</option>

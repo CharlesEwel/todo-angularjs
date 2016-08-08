@@ -3,6 +3,7 @@ import { TaskComponent } from './task.component';
 import { Task } from './task.model';
 import { EditTaskDetailsComponent } from './edit-task-details.component';
 import {NewTaskComponent} from './new-task.component';
+import {NewCategoryComponent} from './new-category.component';
 import {DonePipe} from './done.pipe';
 import {PriorityPipe} from './priority.pipe';
 
@@ -11,7 +12,7 @@ import {PriorityPipe} from './priority.pipe';
   inputs: ['taskList', 'categoryList'],
   outputs: ['onTaskSelect'],
   pipes: [DonePipe, PriorityPipe],
-  directives: [TaskComponent, EditTaskDetailsComponent, NewTaskComponent],
+  directives: [TaskComponent, EditTaskDetailsComponent, NewTaskComponent, NewCategoryComponent],
   templateUrl: 'app/task-list.component.html'
 })
 export class TaskListComponent {

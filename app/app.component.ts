@@ -27,7 +27,7 @@ export class AppComponent {
       new Task("Rewatch all LOTR Movies", "Hobby", 1, 2),
       new Task("Do the Laundry", "Home", 3, 3)
     ];
-    this.categories = ["Work", "Home", "Hobby", "NightLife"];
+    this.categories = ["Work", "Home", "Hobby"];
   }
   taskWasSelected(clickedTask: Task): void {
     console.log('parent', clickedTask);

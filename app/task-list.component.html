@@ -18,5 +18,5 @@
 <edit-task-details
   *ngIf="selectedTask" [task]="selectedTask" [categoryList] = "categoryList">
 </edit-task-details>
-<new-task (onSubmitNewTask)="createTask($event[0],$event[1], $event[2])"></new-task>
+<new-task (onSubmitNewTask)="createTask($event[0],$event[1], $event[2])" [categoryList] = "categoryList"></new-task>
 <new-category (onSubmitNewCategory)="createCategory($event)"></new-category>
