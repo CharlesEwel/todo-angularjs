@@ -9,7 +9,7 @@ import {Task} from './task.model';
     <div class="task-form">
       <h3>Create Task:</h3>
       <input placeholder="Description" class="col-sm-8 input-lg" #newDescription>
-      <select class="input-lg">
+      <select class="input-lg" #newCategory>
         <option *ngFor="#currentCategory of categoryList">{{currentCategory}}</option>
       </select>
       <select class="input-lg" #newPriority>
